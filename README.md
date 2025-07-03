@@ -1,95 +1,91 @@
-# 🌬️ Calculadora de Turbina Eólica
 
-Este é um projeto acadêmico desenvolvido em linguagem C no ambiente online [Replit](https://replit.com). A proposta é simular o funcionamento de uma turbina eólica, calculando a potência gerada com base em dados técnicos e velocidades do vento informadas pelo usuário.
+# 🌬️ Calculadora de Potência de Turbina Eólica
 
----
-
-## 🧠 Sobre o Projeto
-
-O programa foi criado como parte de um projeto acadêmico com foco em programação estruturada em C e aplicações práticas em energia renovável. Ele demonstra como conceitos de física e matemática podem ser integrados a soluções computacionais.
+Este é um projeto em linguagem C que calcula a potência gerada por uma turbina eólica com base na velocidade do vento, densidade do ar, raio das pás e coeficiente de potência (Cp).
 
 ---
 
-## 🎯 Objetivo
+## ⚡ Fórmula Física da Potência Eólica
 
-O objetivo é permitir o cálculo da potência gerada por uma turbina eólica, de forma simples e didática, usando entradas como:
-- Diâmetro do rotor
-- Densidade do ar
-- Eficiência total do sistema
-- Coeficiente de potência
-- Velocidades do vento
+A potência gerada por uma turbina eólica é calculada com base na energia cinética do vento. A fórmula física usada é:
 
----
+\[
+P = \frac{1}{2} \cdot \rho \cdot A \cdot v^3 \cdot C_p
+\]
 
-## 📁 Estrutura do Código
+### Onde:
 
-```
-calculadora_turbina_eolica/
-├── main.c                          # Código fonte principal
-├── turbina_config.txt             # Arquivo com dados técnicos da turbina
-├── velocidades.txt                # Arquivo com velocidades do vento (opcional)
-├── relatorio_potencia_eolica.txt # Arquivo gerado com os resultados
-├── calculadora_de_turbina/        # Pasta com funções auxiliares (separação de lógica)
-├── Makefile                       # Script de compilação automática
-└── .replit / replit.nix           # Configurações do ambiente Replit
-```
+| Símbolo | Significado                                            | Unidade        |
+|---------|---------------------------------------------------------|----------------|
+| \(P\)   | Potência gerada pelo vento                              | Watts (W)      |
+| \(\rho\)| Densidade do ar (típico: 1.225 kg/m³ ao nível do mar)  | kg/m³          |
+| \(A\)   | Área varrida pelas pás (calculada como \(A = \pi r^2\)) | metros quadrados (m²) |
+| \(v\)   | Velocidade do vento                                     | metros por segundo (m/s) |
+| \(C_p\) | Coeficiente de potência da turbina (eficiência)         | Adimensional (0 < Cp ≤ 0.59) |
 
 ---
 
-## 🚀 Como Usar no Replit
-
-1. Acesse [https://replit.com](https://replit.com)
-2. Crie um novo Repl com linguagem **C**
-3. Copie os arquivos do projeto para dentro do ambiente
-4. No terminal do Replit, compile com:
-
-```bash
-gcc main.c -o main
-```
-
-5. Execute o programa:
-
-- Com entrada por arquivo:
-```bash
-./main turbina_config.txt velocidades.txt
-```
-
-- Ou entrada manual:
-```bash
-./main turbina_config.txt
-```
+### 🔎 Observações:
+- O **limite teórico de eficiência** de uma turbina é de **59,3%**, conhecido como **Limite de Betz**:
+  \[
+  C_p \leq 0.593
+  \]
+- Na prática, turbinas comerciais operam com \(C_p\) entre **0.35** e **0.45**.
+- A área \(A\) depende do **raio das pás**:
+  \[
+  A = \pi \cdot r^2
+  \]
 
 ---
 
-## 📄 Exemplo de Arquivo de Configuração (`turbina_config.txt`)
+## 📁 Arquivos
+
+- `main.c`: Código-fonte principal em C.
+- `turbina_config.txt`: Arquivo de configuração com o raio das pás e o coeficiente Cp.
+- `relatorio_potencia_eolica.txt`: Gerado automaticamente com os resultados após a execução.
+- `README.txt`: Instruções para executar localmente ou no Replit.
+
+---
+
+## ▶️ Como executar
+
+### ✅ No Replit:
+
+1. Acesse: [https://replit.com/new/c](https://replit.com/new/c)
+2. Substitua o conteúdo do `main.c` com o código fornecido.
+3. Adicione um novo arquivo chamado `turbina_config.txt` com o seguinte conteúdo:
+   ```
+   RaioMetros: 50.0
+   CoeficientePotencia: 0.45
+   ```
+4. Clique em **"Run"**.
+5. Insira os dados solicitados no terminal:
+   - Densidade do ar (ex: `1.225`)
+   - Velocidade mínima do vento (ex: `1`)
+   - Velocidade máxima do vento (ex: `10`)
+6. O resultado será exibido no terminal e salvo em `relatorio_potencia_eolica.txt`.
+
+---
+
+## 🧠 Exemplo de entrada no terminal
 
 ```
-diametro=50
-densidade_ar=1.225
-coeficiente_potencia=0.4
-eficiencia_total=0.9
-```
-
-## 📄 Exemplo de Arquivo de Velocidades (`velocidades.txt`)
-
-```
-5
-6
-7.5
-9
+Informe a densidade do ar (ex: 1.225): 1.225
+Informe a velocidade mínima do vento (m/s): 1
+Informe a velocidade máxima do vento (m/s): 5
 ```
 
 ---
 
-## ✅ Saída Esperada
+## 🔧 Tecnologias
 
-```
-Velocidade: 5.00 m/s → Potência: 520.13 W
-Velocidade: 6.00 m/s → Potência: 748.99 W
-Velocidade: 7.50 m/s → Potência: 1180.64 W
-Velocidade: 9.00 m/s → Potência: 1755.72 W
-```
+- Linguagem: C (ANSI C)
+- Plataforma recomendada: [Replit](https://replit.com) ou compilador GCC local
 
 ---
 
-Este projeto foi feito exclusivamente no **Replit**, com foco em aprendizado e aplicação de conceitos acadêmicos em programação C e energia renovável.
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e compartilhar.
+
+---
