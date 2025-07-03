@@ -9,34 +9,24 @@ Este é um projeto em linguagem C que calcula a potência gerada por uma turbina
 
 A potência gerada por uma turbina eólica é calculada com base na energia cinética do vento. A fórmula física usada é:
 
-\[
-P = \frac{1}{2} \cdot \rho \cdot A \cdot v^3 \cdot C_p
-\]
-
-### Onde:
-
-| Símbolo | Significado                                            | Unidade        |
-|---------|---------------------------------------------------------|----------------|
-| \(P\)   | Potência gerada pelo vento                              | Watts (W)      |
-| \(\rho\)| Densidade do ar (típico: 1.225 kg/m³ ao nível do mar)  | kg/m³          |
-| \(A\)   | Área varrida pelas pás (calculada como \(A = \pi r^2\)) | metros quadrados (m²) |
-| \(v\)   | Velocidade do vento                                     | metros por segundo (m/s) |
-| \(C_p\) | Coeficiente de potência da turbina (eficiência)         | Adimensional (0 < Cp ≤ 0.59) |
+**P = 0.5 × ρ × A × v³ × Cp**
 
 ---
 
-### 🔎 Observações:
-- O **limite teórico de eficiência** de uma turbina é de **59,3%**, conhecido como **Limite de Betz**:
-  \[
-  C_p \leq 0.593
-  \]
-- Na prática, turbinas comerciais operam com \(C_p\) entre **0.35** e **0.45**.
-- A área \(A\) depende do **raio das pás**:
-  \[
-  A = \pi \cdot r^2
-  \]
+## Onde:
+
+| Símbolo | Significado                                           | Unidade                   |
+|---------|--------------------------------------------------------|---------------------------|
+| **P**   | Potência gerada pelo vento                             | Watts (W)                 |
+| **ρ**   | Densidade do ar (tipicamente 1.225 kg/m³ ao nível do mar) | kg/m³                     |
+| **A**   | Área varrida pelas pás *(A = π × r²)*                  | metros quadrados (m²)     |
+| **v**   | Velocidade do vento                                    | metros por segundo (m/s)  |
+| **Cp**  | Coeficiente de potência da turbina (eficiência)        | Adimensional (0 < Cp ≤ 0.59) |
 
 ---
+
+> Obs.: O **Cp** tem como limite teórico máximo o valor de **0.593**, conhecido como **Limite de Betz**.
+
 
 ## 📁 Arquivos
 
