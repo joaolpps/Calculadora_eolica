@@ -37,32 +37,39 @@ A potência gerada por uma turbina eólica é calculada com base na energia cin�
 
 ### ✅ No Replit:
 
-1. Acesse: https://replit.com/new/c
+1. Acesse: [https://replit.com/new/c](https://replit.com/new/c)
 2. Substitua o conteúdo do `main.c` com o código fornecido.
 3. Adicione um novo arquivo chamado `turbina_config.txt` com o seguinte conteúdo:
-   ```
+
+   ```txt
    RaioMetros: 50.0
    CoeficientePotencia: 0.45
    ```
-4. Clique em "Run".
+
+4. Clique em **Run**.
 5. Insira os dados solicitados no terminal.
 
 O resultado será exibido no terminal e salvo em `relatorio_potencia_eolica.txt`.
 
+---
+
 ### ✅ Executar localmente (GCC):
 
 1. Compile com o GCC:
+
    ```bash
    gcc main.c -o turbina
    ```
 
 2. Crie o arquivo `turbina_config.txt` com:
-   ```
+
+   ```txt
    RaioMetros: 50.0
    CoeficientePotencia: 0.45
    ```
 
 3. Execute:
+
    ```bash
    ./turbina
    ```
@@ -73,7 +80,7 @@ O resultado será exibido no terminal e salvo em `relatorio_potencia_eolica.txt`
 
 ## 🧠 Exemplo de entrada no terminal
 
-```
+```txt
 Informe a densidade do ar (ex: 1.225): 1.225
 Informe a velocidade mínima do vento (m/s): 1
 Informe a velocidade máxima do vento (m/s): 5
@@ -83,7 +90,8 @@ Informe a velocidade máxima do vento (m/s): 5
 
 ## 🔧 Tecnologias
 
-- Linguagem: C 
+- Linguagem: C
 - Plataforma recomendada: Replit ou compilador GCC local
 
 ---
+
