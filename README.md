@@ -79,13 +79,5 @@ Informe a velocidade máxima do vento (m/s): 5
 
 ## 🔧 Tecnologias
 
-- Linguagem: C (ANSI C)
+- Linguagem:
 - Plataforma recomendada: [Replit](https://replit.com) ou compilador GCC local
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Sinta-se livre para usar, modificar e compartilhar.
-
----
