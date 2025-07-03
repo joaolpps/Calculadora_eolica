@@ -1,0 +1,2 @@
+RaioMetros: 50.0
+CoeficientePOtencia: 0.45
